@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    background-color: #e7e9e9;
+}
+
+.container {
+    max-width: 650px;
+    margin: 5px;
+    width: calc(100% - 10px);
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+
+.test {
+    user-select: none;
+}
+
+input.input-field {
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+}
+
+span {
+    font-size: 20px;
+    user-select: none;
+    cursor: text;
+}
+
+span.active {
+    border-bottom: 3px solid blue;
+}
+
+span.correct {
+    background-color: rgb(22, 178, 22);
+}
+
+span.wrong {
+    color: darkred;
+    background-color: pink;
+}
+.result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid rgb(106, 106, 104);
+}
+
+button.btn {
+    padding: 5px;
+    outline: none;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #049c13;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+button.btn:hover {
+    background-color: #02500b;
+}
+
+.correct-char {
+    color: green;
+  }
+  .wrong-char {
+    color: red;
+  }
+  .pending {
+    color: blue;
+    opacity: 0.5;
+  }
+  .word.correct {
+    background-color: rgba(0, 255, 0, 0.2);
+  }
+  .word.wrong {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+  
+
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --input-bg: #f5f5f5;
+    --input-border: #ccc;
+    --word-active-bg: #d3eafd;
+    --word-correct-bg: #d4edda;
+    --word-wrong-bg: #f8d7da;
+    --highlight: #007bff;
+  }
+  
+  [data-theme='dark'] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --input-bg: #1f1f1f;
+    --input-border: #555;
+    --word-active-bg: #2c3e50;
+    --word-correct-bg: #155724;
+    --word-wrong-bg: #721c24;
+    --highlight: #66b2ff;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    outline: none;
+    margin-bottom: 1rem;
+  }
+  
+  .paragraph {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    user-select: none;
+  }
+  
+  .word {
+    margin-right: 4px;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  
+  .word.active {
+    background-color: var(--word-active-bg);
+  }
+  
+  .word.correct {
+    background-color: var(--word-correct-bg);
+    color: #155724;
+  }
+  
+  .word.wrong {
+    background-color: var(--word-wrong-bg);
+    color: #721c24;
+  }
+  
+  .correct-char {
+    color: green;
+  }
+  
+  .wrong-char {
+    color: red;
+  }
+  
+  .pending {
+    color: gray;
+  }
+  
+  .result p {
+    margin: 5px 0;
+  }
+  
+  button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--highlight);
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
